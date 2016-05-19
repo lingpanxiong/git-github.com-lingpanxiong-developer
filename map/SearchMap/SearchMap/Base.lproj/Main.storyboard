@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HUX-vX-P9V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87a-W6-FJl">
+                                <rect key="frame" x="145" y="482" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.94353664444874474" green="1" blue="0.69601043164991472" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="旅馆"/>
+                                <connections>
+                                    <action selector="btnhotelclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PqX-3h-nn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-FK-uHu">
+                                <rect key="frame" x="145" y="482" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.53633567666933901" blue="0.51832185614410764" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="医院"/>
+                                <connections>
+                                    <action selector="btnhospitalclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aec-CS-BXy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xad-Ob-rGU">
+                                <rect key="frame" x="145" y="482" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.34752556417122082" green="1" blue="0.57702278139920571" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="超市"/>
+                                <connections>
+                                    <action selector="btnsmclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tL-6R-ZQm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-6W-HVt">
+                                <rect key="frame" x="140" y="520" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Em-DG-Qgp"/>
+                                    <constraint firstAttribute="width" constant="40" id="Ffj-LT-0ze"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="1"/>
+                                <connections>
+                                    <action selector="btnMenuclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qph-Zk-KKB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HUX-vX-P9V" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3yf-Oy-bsR"/>
+                            <constraint firstItem="xad-Ob-rGU" firstAttribute="centerX" secondItem="8Eo-6W-HVt" secondAttribute="centerX" id="Y46-Je-cI6"/>
+                            <constraint firstItem="87a-W6-FJl" firstAttribute="baseline" secondItem="xad-Ob-rGU" secondAttribute="baseline" id="YGs-qi-iAB"/>
+                            <constraint firstItem="MDX-FK-uHu" firstAttribute="baseline" secondItem="xad-Ob-rGU" secondAttribute="baseline" id="Yor-Ku-5Dh"/>
+                            <constraint firstItem="HUX-vX-P9V" firstAttribute="centerX" secondItem="xad-Ob-rGU" secondAttribute="centerX" id="g6X-ba-M64"/>
+                            <constraint firstItem="8Eo-6W-HVt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngR-12-eFV"/>
+                            <constraint firstItem="87a-W6-FJl" firstAttribute="leading" secondItem="MDX-FK-uHu" secondAttribute="leading" id="phe-be-Tvd"/>
+                            <constraint firstItem="HUX-vX-P9V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rqP-Mz-ot0"/>
+                            <constraint firstItem="HUX-vX-P9V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ryg-M1-QuC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Eo-6W-HVt" secondAttribute="bottom" constant="8" id="t3I-c8-qb4"/>
+                            <constraint firstItem="8Eo-6W-HVt" firstAttribute="top" secondItem="xad-Ob-rGU" secondAttribute="bottom" constant="8" symbolic="YES" id="xaE-o5-p5p"/>
+                            <constraint firstItem="87a-W6-FJl" firstAttribute="leading" secondItem="xad-Ob-rGU" secondAttribute="leading" id="xuw-Jh-r0m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="8Eo-6W-HVt" id="X90-Ud-atX"/>
+                        <outlet property="btnhospital" destination="MDX-FK-uHu" id="FHc-hD-ylh"/>
+                        <outlet property="btnhotel" destination="87a-W6-FJl" id="dHZ-FI-br4"/>
+                        <outlet property="btnsm" destination="xad-Ob-rGU" id="z0m-5J-GSI"/>
+                        <outlet property="mapview" destination="HUX-vX-P9V" id="HMp-db-4Sn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="403"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="512" height="512"/>
+    </resources>
+</document>
